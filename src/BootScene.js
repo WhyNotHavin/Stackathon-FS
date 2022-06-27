@@ -7,6 +7,7 @@ import fall from './sounds/sounds_fall.mp3';
 import land from './sounds/land.mp3';
 import bump from './sounds/bump.mp3';
 import jump from './sounds/jump.mp3';
+import music from './sounds/music.mp3';
 import level1 from './assets/level1.png';
 import level2 from './assets/level2.png';
 import level3 from './assets/level3.png';
@@ -32,7 +33,7 @@ export default class BootScene extends Phaser.Scene {
       .setScale(0, 1);
     // console.log('SOUNDS =======', sounds);
     // console.table(fall);
-    this.load.audio('backgroundMusic', sounds.music);
+    this.load.audio('backgroundMusic', music);
     this.load.audio('bump', bump);
     this.load.audio('fall', fall);
     this.load.audio('jump', jump);
