@@ -3,23 +3,23 @@
 import Phaser from 'phaser';
 // import images from './assets/*.png';
 // import sounds from './sounds/*.mp3';
-import fall from './sounds/sounds_fall.mp3';
-import land from './sounds/land.mp3';
-import bump from './sounds/bump.mp3';
-import jump from './sounds/jump.mp3';
-import music from './sounds/music.mp3';
-import level1 from './assets/level1.png';
-import level2 from './assets/level2.png';
-import level3 from './assets/level3.png';
-import level4 from './assets/level4.png';
-import level5 from './assets/level5.png';
-import level6 from './assets/level6.png';
-import level7 from './assets/level7.png';
-import level8 from './assets/level8.png';
-import level9 from './assets/level9.png';
-import level10 from './assets/level10.png';
-import platform from './assets/platform.png';
-import dude from './assets/dude.png';
+import fall from 'url:./sounds/sounds_fall.mp3';
+import land from 'url:./sounds/land.mp3';
+import bump from 'url:./sounds/bump.mp3';
+import jump from 'url:./sounds/jump.mp3';
+import music from 'url:./sounds/music.mp3';
+import level1 from 'url:./assets/level1.png';
+import level2 from 'url:./assets/level2.png';
+import level3 from 'url:./assets/level3.png';
+import level4 from 'url:./assets/level4.png';
+import level5 from 'url:./assets/level5.png';
+import level6 from 'url:./assets/level6.png';
+import level7 from 'url:./assets/level7.png';
+import level8 from 'url:./assets/level8.png';
+import level9 from 'url:./assets/level9.png';
+import level10 from 'url:./assets/level10.png';
+import platform from 'url:./assets/platform.png';
+import dude from 'url:./assets/dude.png';
 
 export default class BootScene extends Phaser.Scene {
   constructor() {
