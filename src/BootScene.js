@@ -19,6 +19,7 @@ import level9 from './assets/level9.png';
 import level10 from './assets/level10.png';
 import platform from './assets/platform.png';
 import dude from './assets/dude.png';
+
 export default class BootScene extends Phaser.Scene {
   constructor() {
     super({ key: 'boot' });

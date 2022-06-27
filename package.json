@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "parcelled": "parcel src/index.html — open",
-    "build": "parcel build",
+    "build": "parcel build src/index.html",
     "start": "serve",
     "heroku-postbuild": "parcel build src/index.html"
   },

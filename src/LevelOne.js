@@ -41,9 +41,7 @@ export default class levelOne extends Phaser.Scene {
     platforms.create(1320, 350, 'platform').setScale(2).refreshBody();
     platforms.create(1320, 100, 'platform').setScale(2).refreshBody();
     platforms.create(1320, -100, 'platform').setScale(2).refreshBody();
-
     this.add.image(600, 450, 'level1');
-
     if (data.positionX) {
       player = this.physics.add
         .sprite(data.positionX, data.positionY, 'dude')
