@@ -11,6 +11,7 @@ let jump;
 let fall;
 let land;
 let bump;
+let n;
 export default class levelFive extends Phaser.Scene {
   constructor() {
     super({ key: 'level5' });
@@ -126,6 +127,7 @@ export default class levelFive extends Phaser.Scene {
         land.play();
       }
     });
+    n = this.input.keyboard.addKey('N');
   }
 
   update() {
@@ -134,7 +136,13 @@ export default class levelFive extends Phaser.Scene {
     } else {
       player.setBounce(0.5);
     }
-
+    if (n.isDown) {
+      this.scene.start('level6', {
+        positionX: player.x,
+        positionY: 300,
+        velocity: player.body.velocity,
+      });
+    }
     if (player.y < -5) {
       let currPos = 885 - player.y;
       this.scene.start('level6', {

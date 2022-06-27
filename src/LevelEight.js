@@ -11,6 +11,7 @@ let jump;
 let fall;
 let land;
 let bump;
+let n;
 export default class levelEight extends Phaser.Scene {
   constructor() {
     super({ key: 'level8' });
@@ -27,7 +28,6 @@ export default class levelEight extends Phaser.Scene {
     land = this.sound.add('land');
     bump = this.sound.add('bump');
 
-    this.add.image(600, 450, 'level8');
     // left edge v
     platforms.create(-70, 350, 'platform').setScale(2).refreshBody();
     platforms.create(-120, 100, 'platform').setScale(2).refreshBody();
@@ -74,7 +74,9 @@ export default class levelEight extends Phaser.Scene {
 
     platforms.create(525, 135, 'platform').setScale(1.2).refreshBody();
 
-    platforms.create(600, 970, 'platform').refreshBody();
+    // platforms.create(600, 970, 'platform').refreshBody();
+
+    this.add.image(600, 450, 'level8');
     if (data.positionX) {
       player = this.physics.add
         .sprite(data.positionX, data.positionY, 'dude')
@@ -119,6 +121,7 @@ export default class levelEight extends Phaser.Scene {
         land.play();
       }
     });
+    n = this.input.keyboard.addKey('N');
   }
 
   update() {
@@ -140,7 +143,13 @@ export default class levelEight extends Phaser.Scene {
     } else {
       player.setBounce(0.5);
     }
-
+    if (n.isDown) {
+      this.scene.start('level9', {
+        positionX: player.x,
+        positionY: 300,
+        velocity: player.body.velocity,
+      });
+    }
     if (player.y < -5) {
       let currPos = 885 - player.y;
       this.scene.start('end', {

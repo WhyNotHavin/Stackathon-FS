@@ -2,8 +2,9 @@
   "name": "Jump King with phaser",
   "version": "1.0.0",
   "scripts": {
-    "start": "parcel src/index.html — open",
-    "build": "parcel build src/index.html",
+    "parcelled": "parcel src/index.html — open",
+    "build": "parcel build",
+    "start": "serve",
     "heroku-postbuild": "parcel build src/index.html"
   },
   "author": "Havin",

@@ -10,6 +10,7 @@ let jump;
 let fall;
 let land;
 let bump;
+let n;
 export default class levelOne extends Phaser.Scene {
   constructor() {
     super({ key: 'level1' });
@@ -78,7 +79,7 @@ export default class levelOne extends Phaser.Scene {
       frameRate: 10,
       repeat: -1,
     });
-
+    n = this.input.keyboard.addKey('N');
     cursors = this.input.keyboard.createCursorKeys();
     this.physics.add.collider(player, platforms, function (player, platforms) {
       if (player.body.velocity.y > 15 || player.body.velocity.y < -15) {
@@ -95,7 +96,13 @@ export default class levelOne extends Phaser.Scene {
     } else {
       player.setBounce(0.5);
     }
-
+    if (n.isDown) {
+      this.scene.start('level2', {
+        positionX: player.x,
+        positionY: 300,
+        velocity: player.body.velocity,
+      });
+    }
     if (player.y < -5) {
       let currPos = 885 - player.y;
       this.scene.start('level2', {
