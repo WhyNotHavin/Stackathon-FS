@@ -2,7 +2,7 @@
 
 import Phaser from 'phaser';
 import images from './assets/*.png';
-import sounds from './sounds/*.mp3';
+// import sounds from './sounds/*.mp3';
 import fall from './sounds/sounds_fall.mp3';
 import land from './sounds/land.mp3';
 import bump from './sounds/bump.mp3';
