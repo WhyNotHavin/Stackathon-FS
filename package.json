@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "main": "src/index.html",
   "scripts": {
-    "build": "parcel build src/index.html --public-url ./ --no-source-maps",
-    "start": "parcel serve src/index.html"
+    "start": "parcel src/index.html — open",
+    "build": "parcel build src/index.html",
+    "heroku-postbuild": "parcel build src/index.html"
   },
   "author": "Havin",
   "license": "ISC",
   "dependencies": {
-    "phaser": "^3.55.2"
+    "parcel": "^2.6.2",
+    "parcel-bundler": "^1.12.5",
+    "phaser": "^3.55.2",
+    "serve": "^13.0.2"
   },
   "devDependencies": {
     "cssnano": "^4.1.10",
