@@ -1,7 +1,6 @@
 {
   "name": "Jump King with phaser",
   "version": "1.0.0",
-  "main": "src/index.html",
   "scripts": {
     "start": "parcel src/index.html — open",
     "build": "parcel build src/index.html",
